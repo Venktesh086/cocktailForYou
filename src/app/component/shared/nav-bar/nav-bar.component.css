@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8c94d;
+    padding: 10px 20px;
+  }
+  .navbar .links button {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  .icon {
+  width: 30px;
+  height: 20px ;
+  background-color: #f8c94d;
+  }
+  .navbar button {
+    background: #f8c94d;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }

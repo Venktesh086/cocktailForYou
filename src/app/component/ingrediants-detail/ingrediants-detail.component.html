@@ -1,0 +1,21 @@
+<div class="product-details">
+    <div >PRODUCTS DETAILS</div>
+    <div class="ingredientsdetails">
+      <img [src]="product.strDrinkThumb" alt="{{ product.strDrink }}" />
+      <h2>{{ product.strDrink }}</h2>
+      <p>Drink ID: {{product.idDrink}}</p>
+      <p>Drink Type: <span class="drinkType">{{ product.strAlcoholic }}</span></p>
+      <p>Rs. {{ product.price }}</p>
+      
+      <div class="quantiyAlignment"> <span>Quantity </span>
+        <button class="lessQuantity" (click)="decreaseQuantity()">-</button>
+        <span>{{ quantity }}</span>
+        <button class="moreQuantity" (click)="increaseQuantity()">+</button>
+      </div>
+      <br>
+      <button class="cartButton" (click)="addToCart()">Add to Cart</button>
+      <div class="productDetails">Product Details:</div>
+      <div>{{product.strInstructions}}</div>
+      </div>
+    </div>
+    

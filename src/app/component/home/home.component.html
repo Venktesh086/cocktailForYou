@@ -1,0 +1,36 @@
+<div >
+  
+    <div class="itemsname">Popular items</div>
+    <div class="popular-items">
+   
+     <div *ngFor="let item of popularDrinks" class="item-card" >
+        <div (click)="productDetails(item)"><img class="images" [src]="item.strDrinkThumb" alt="{{ item.name }}" />
+        <h2>{{ item.strDrink }}</h2>
+        <p>Drink Id: {{ item.idDrink }}</p>
+      </div>
+        <button (click)="addToCart(item)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="itemsname">Special Offers</div>
+    <div class="popular-items">
+   
+     <div *ngFor="let item of specialOffers" class="item-card" >
+      <div (click)="productDetails(item)"><img class="images" [src]="item.strDrinkThumb" alt="{{ item.name }}" />
+        <h2>{{ item.strDrink }}</h2>
+        <p>Drink Id: {{ item.idDrink }}</p>
+      </div>
+        <button (click)="addToCart(item)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="itemsname">New Arrival items</div>
+    <div class="popular-items">
+   
+     <div *ngFor="let item of newArrival" class="item-card" >
+      <div (click)="productDetails(item)"><img class="images" [src]="item.strDrinkThumb" alt="{{ item.name }}" />
+        <h2>{{ item.strDrink }}</h2>
+        <p>Drink Id: {{ item.idDrink }}</p>
+      </div>
+        <button (click)="addToCart(item)">Add to Cart</button>
+      </div>
+    </div>
+    

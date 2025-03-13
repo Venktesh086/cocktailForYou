@@ -1,0 +1,21 @@
+<div class="cart">
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <img class="images" [src]="item.strDrinkThumb" alt="{{item.strDrink}}"/>
+      <h3>{{ item.strDrink }}</h3><h3>Drink Id: {{item.idDrink}}</h3>
+      <p>Rs. 399</p>
+      <div>
+        <button class="lessQuantity" (click)="updateQuantity(item.idDrink, item.quantity - 1)" >-</button>
+        <span>{{ item.quantity }}</span>
+        <button class="moreQuantity" (click)="updateQuantity(item.idDrink, item.quantity + 1)">+</button>
+      </div>
+      <br>
+      <button (click)="removeItem(item.idDrink)">Remove</button>
+      <br>
+    </div>
+    <div class="cart-total">
+      <h2>Total: ₹{{ total }}</h2>
+      <button (click)="checkout()">Buy Now</button>
+    </div>
+   
+  </div>
+  
