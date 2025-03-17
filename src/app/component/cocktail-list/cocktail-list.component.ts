@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CocktailService } from '../../services/cocktail.service';
 import { CommonModule } from '@angular/common';
+import { Cocktail } from '../../cocktail.model';
 
 @Component({
   selector: 'app-cocktail-list',
@@ -9,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cocktail-list.component.css'
 })
 export class CocktailListComponent {
-  cartItems:any=[];
+  cartItems:Cocktail[]=[];
   images=this.cartItems;
   total = 0;
   constructor(private cartService: CocktailService) {}
